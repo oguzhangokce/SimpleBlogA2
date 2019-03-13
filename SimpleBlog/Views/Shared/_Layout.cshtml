@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - Simple Blog </title>
+</head>
+<body>
+    <header>
+        <img src="https://www.trakya.edu.tr/admin/tools/theme/www_v2/images/logo/tr/logo.png" />
+        <h1>
+            <a href="@Url.RouteUrl("Home")"></a>Simple Blog
+        </h1>
+        <a href="@Url.RouteUrl("Login")">Login</a>
+    </header>
+    <!--Insert View Here-->
+    @RenderBody()
+    <footer>
+        &copy; @DateTime.Now.Year
+    </footer>
+
+    @RenderSection("Scripts",false)
+
+</body>
+</html>

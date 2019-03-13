@@ -1,0 +1,60 @@
+﻿@model SimpleBlog.ViewModels.AuthRegister
+
+@{
+    ViewBag.Title = "Register Page";
+}
+<p>This is the Register View!</p>
+
+<br />
+@using (Html.BeginForm())
+{
+    <table border="1">
+        <tr>
+
+            @Html.ValidationSummary()
+
+            <td align="right"> @Html.LabelFor(x => x.StudentNumber) </td>
+            <td>
+                <div>
+                    
+                    @Html.EditorFor(x => x.StudentNumber)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td align="right"> @Html.LabelFor(x => x.StudentName) </td>
+            <td>
+                <div>
+                    
+                    @Html.EditorFor(x => x.StudentName)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td align="right"> @Html.LabelFor(x => x.StudentSurname) </td>
+            <td>
+                <div>
+                    
+                    @Html.EditorFor(x => x.StudentSurname)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td align="right"> @Html.LabelFor(x => x.StudentEmail) </td>
+            <td>
+                <div>
+                    
+                    @Html.EditorFor(x => x.StudentEmail)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <div>
+                    <input type="submit" value="Register" />
+                </div>
+            </td>
+
+        </tr>
+    </table>
+}
